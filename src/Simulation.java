@@ -85,12 +85,10 @@ public class Simulation {
         for (Rocket rocket:rocketsList){
             do {
                 cost+=rocket.getCost();
-            }while (rocket.launch()&&rocket.land());
+            }while (!(rocket.launch()&&rocket.land()));
 
 
         }
-
-
 
          return cost;
     }
